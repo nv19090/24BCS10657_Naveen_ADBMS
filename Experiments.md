@@ -12,7 +12,6 @@ Insert sample data into the tables and retrieve the first record from the first 
 
 ### Insert Data
 
-```sql
 -- Doctors
 INSERT INTO Doctors (DoctorID, Name, Specialization, ContactNumber, Email) VALUES
 (1, 'Dr. John Smith', 'Cardiology', '1234567890', 'john.smith@hospital.com'),
@@ -42,17 +41,14 @@ INSERT INTO MedicalRecords (RecordID, PatientID, TreatmentID, Notes) VALUES
 INSERT INTO Billing (BillID, PatientID, TreatmentID, Amount, BillDate, Status) VALUES
 (1, 1, 1, 200.00, 'Paid'),
 (2, 2, 2, 500.00, 'Unpaid');
-```
+
 
 ### Retrieve First Record
 
-```sql
 SELECT * FROM Doctors LIMIT 1;
-
 SELECT * FROM Patients LIMIT 1;
-
 SELECT * FROM Appointments LIMIT 1;
-```
+
 
 ## Output
 
