@@ -219,3 +219,127 @@ After completing this experiment, I learned:
 # Conclusion
 
 This experiment provided practical exposure to SQL Set Operations used for combining and comparing multiple result sets. Understanding these operations improves the ability to write efficient SQL queries for data retrieval and analysis while maintaining data consistency.
+
+---
+
+# Experiment 3 – Aggregate Functions and SQL Joins
+
+## Objective
+
+The objective of this experiment is to understand the use of SQL Aggregate Functions, conditional counting using the `CASE` statement, grouping of records using `GROUP BY`, filtering grouped data using `HAVING`, sorting results using `ORDER BY`, retrieving unique records using `DISTINCT`, and implementing `LEFT JOIN` to identify unmatched records between related tables.
+
+---
+
+## Experiment 3.1 – COUNT using CASE
+
+### Problem Statement
+
+Write a SQL query to count the number of students in each department who have scored more than **80** marks. Display the count using the alias **Dept_HighScore_Count**.
+
+### Theory
+
+The `CASE` statement allows conditional logic to be applied inside SQL queries. When combined with the `COUNT()` aggregate function, only the values satisfying the specified condition are counted, while `NULL` values are ignored.
+
+This approach is useful for calculating conditional counts without writing multiple queries.
+
+### Working
+
+1. Reads all records from the **student** table.
+2. Evaluates whether each student's marks are greater than **80**.
+3. Returns **1** for records satisfying the condition and **NULL** for others.
+4. Counts only the non-null values.
+5. Groups the result according to each department.
+
+---
+
+## Experiment 3.2 – Aggregate Functions with GROUP BY, HAVING and ORDER BY
+
+### Problem Statement
+
+Create an **Employees** table and perform various SQL operations using aggregate functions to analyze employee data based on different cities.
+
+### Concepts Covered
+
+- Aggregate Functions (`COUNT`, `SUM`, `MIN`, `MAX`, `AVG`)
+- GROUP BY
+- HAVING
+- ORDER BY
+- DISTINCT
+- Conditional Aggregation using CASE
+
+### Tasks Performed
+
+#### 1. Count the total number of employees in each city.
+
+Uses the `COUNT()` function along with the `GROUP BY` clause to determine the total number of employees belonging to each city.
+
+#### 2. Count employees whose salary is greater than or equal to **90,000**.
+
+Uses the `SUM(CASE...)` technique to count only those employees satisfying the salary condition.
+
+#### 3. Sort employee counts by city name.
+
+Applies the `ORDER BY` clause to display cities in descending alphabetical order.
+
+#### 4. Sort employee counts based on the number of employees.
+
+Displays cities according to the calculated employee count in descending order.
+
+#### 5. Find cities having at least two employees.
+
+Uses the `HAVING` clause to filter grouped records after aggregation.
+
+#### 6. Display unique city names.
+
+Uses the `DISTINCT` keyword to eliminate duplicate city names from the result set.
+
+---
+
+### Working
+
+This experiment demonstrates how aggregate functions can be combined with SQL clauses such as `GROUP BY`, `HAVING`, `ORDER BY`, and `DISTINCT` to summarize, filter, and organize relational data efficiently.
+
+---
+
+## Experiment 3.3 – Customers Who Never Order
+
+### Problem Statement
+
+Given the **Customers** and **Orders** tables, write a SQL query to find the names of customers who have never placed an order.
+
+### Theory
+
+A `LEFT JOIN` returns all records from the left table and the matching records from the right table.
+
+If no matching record exists in the right table, the corresponding columns contain `NULL` values.
+
+By filtering these `NULL` values, it becomes possible to identify customers who have never placed an order.
+
+### Working
+
+1. Retrieves all customers from the **Customers** table.
+2. Performs a **LEFT JOIN** with the **Orders** table.
+3. Matches customers using the customer ID.
+4. Identifies rows where no matching order exists.
+5. Displays only the names of customers who have never placed an order.
+
+---
+
+## Key Learnings
+
+After completing this experiment, I learned to:
+
+- Apply conditional counting using the `CASE` statement.
+- Use aggregate functions to summarize data.
+- Group records using `GROUP BY`.
+- Filter grouped data using `HAVING`.
+- Sort query results using `ORDER BY`.
+- Retrieve unique records using `DISTINCT`.
+- Use `LEFT JOIN` to identify unmatched records between related tables.
+- Apply SQL techniques to solve real-world database problems.
+
+---
+
+## Conclusion
+
+This experiment provided practical experience with SQL Aggregate Functions and Join operations. It demonstrated how SQL can be used to summarize data, perform conditional analysis, organize grouped information, and identify unmatched records across multiple tables. These concepts form the foundation for writing efficient analytical queries in relational database management systems.
