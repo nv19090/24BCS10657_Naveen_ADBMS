@@ -343,3 +343,145 @@ After completing this experiment, I learned to:
 ## Conclusion
 
 This experiment provided practical experience with SQL Aggregate Functions and Join operations. It demonstrated how SQL can be used to summarize data, perform conditional analysis, organize grouped information, and identify unmatched records across multiple tables. These concepts form the foundation for writing efficient analytical queries in relational database management systems.
+
+---
+
+---
+
+# Experiment 4 – SQL Joins
+
+## Objective
+
+The objective of this experiment is to understand the implementation of SQL Join operations for retrieving and combining related data from multiple tables. The experiment covers practical scenarios involving customers, orders, products, categories, students, courses, and employees to demonstrate how relational databases establish connections between different entities.
+
+---
+
+## Overview
+
+This experiment contains six SQL programs that demonstrate different join operations through real-world database scenarios. Each program focuses on retrieving meaningful information by combining records from multiple related tables.
+
+---
+
+## Experiment 4.1 – Customer, Orders and Products
+
+### Problem Statement
+
+Perform SQL Join operations to:
+
+- Display customer names along with their order dates.
+- Display all customers and their corresponding ordered products, including customers who have not placed any orders.
+- Display product names along with their order dates for ordered products.
+
+### Concepts Covered
+
+- INNER JOIN
+- LEFT JOIN
+- Multi-table Data Retrieval
+
+---
+
+## Experiment 4.2 – Student and Course Database
+
+### Problem Statement
+
+Join the **Student** and **Course** tables to retrieve complete course information for students.
+
+The experiment demonstrates:
+
+- Matching records from both tables.
+- Retrieving all student records even when corresponding course information is unavailable.
+
+### Concepts Covered
+
+- INNER JOIN
+- LEFT JOIN
+- Primary Key and Foreign Key Relationships
+
+---
+
+## Experiment 4.3 – Customer, Product and Category Database
+
+### Problem Statement
+
+Retrieve information by combining multiple related tables.
+
+The tasks include:
+
+- Displaying complete order information along with customer details.
+- Retrieving product names together with their categories.
+- Displaying all categories along with the products belonging to each category.
+
+### Concepts Covered
+
+- LEFT JOIN
+- INNER JOIN
+- Multi-table Queries
+
+---
+
+## Experiment 4.4 – Student and Course (Full Outer Join)
+
+### Problem Statement
+
+Combine the **Student** and **Course** tables to retrieve both matching and non-matching records from each table.
+
+### Concepts Covered
+
+- FULL OUTER JOIN
+- Handling NULL values
+- Complete Data Retrieval
+
+---
+
+## Experiment 4.5 – Employee Hierarchy and Customer Products
+
+### Problem Statement
+
+Implement SQL queries to:
+
+- Display employees together with their managers using a self-referencing table.
+- Generate every possible combination of customers and products.
+
+### Concepts Covered
+
+- SELF JOIN
+- CROSS JOIN
+- Employee Hierarchy
+- Cartesian Product
+
+---
+
+## Experiment 4.6 – Student Self Join
+
+### Problem Statement
+
+Perform Self Join operations on the **Student** table to:
+
+- Identify students belonging to the same department.
+- Find students who have selected the same favourite course.
+
+### Concepts Covered
+
+- SELF JOIN
+- Table Aliasing
+- Relationship within the Same Table
+
+---
+
+## Learning Outcomes
+
+After completing this experiment, I learned to:
+
+- Retrieve related information from multiple tables using SQL Join operations.
+- Understand relationships established through primary and foreign keys.
+- Apply different join techniques based on different database requirements.
+- Retrieve matching, non-matching, and complete datasets efficiently.
+- Perform Self Join to establish relationships within the same table.
+- Generate Cartesian products using Cross Join.
+- Solve real-world relational database problems using SQL joins.
+
+---
+
+## Conclusion
+
+This experiment provided practical exposure to SQL Join operations by solving different relational database problems involving customers, students, products, courses, employees, and orders. The implementation strengthened the understanding of how multiple tables interact within a relational database and demonstrated the importance of joins in efficient data retrieval and analysis.
